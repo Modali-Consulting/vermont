@@ -1,0 +1,13 @@
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    margin: 0 auto;
+  }
+  
+  .iframe-container iframe {
+    width: 100%;
+    height: auto; /* Adjust height as necessary, you might want to set a specific height */
+  }
+  
