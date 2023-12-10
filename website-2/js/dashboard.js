@@ -54,7 +54,7 @@ async function getToken(dashboardId) {
 }
 function initializeDashboard(dashboardContainer) {
     const dashboardId = dashboardContainer.dataset.dashboardId;
-    const mountPoint = dashboardContainer.querySelector('p');  // Updated to select the <p> element
+    const mountPoint = dashboardContainer;  // Updated to select the <p> element .querySelector('p')
 
     supersetEmbeddedSdk.embedDashboard({
         id: dashboardId,
@@ -65,9 +65,12 @@ function initializeDashboard(dashboardContainer) {
             hideTitle: true,
             hideChartControls: true,
             hideTab: true,
+            height: '100%',
+            width: '100%',
         },
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const dashboardContainers = document.querySelectorAll('.dashboard-container');

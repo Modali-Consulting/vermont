@@ -177,10 +177,19 @@ footer {
 }
 
 
-/*Dashbord container options*/
-.dashboard-container .iframe{
+
+/* Dashboard container styles */
+.dashboard-container {
     position: relative;
     display: block;
     padding: 10px;
-    width: 100%;    
+    width: 100%;
+    overflow: hidden; /* Hide scrollbars */
+    margin: auto; /* Center the dashboard container within the main body */
+}
+
+/* Ensure the <p> inside dashboard-container fills the container */
+.dashboard-container p {
+    margin: 0; /* Remove margin to fit the container properly */
+    height: 100%; /* Expand to the height of the container */
 }
