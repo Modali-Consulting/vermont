@@ -193,3 +193,9 @@ footer {
     margin: 0; /* Remove margin to fit the container properly */
     height: 100%; /* Expand to the height of the container */
 }
+
+iframe {
+    width: 1200px;
+    height: 1480px;
+    border: none;
+  }
