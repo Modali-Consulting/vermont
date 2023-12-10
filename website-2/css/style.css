@@ -199,5 +199,6 @@ footer {
 iframe {
     width: 1200px;
     height: 1480px;
+    border: none; 
     
 }
