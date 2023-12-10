@@ -178,7 +178,7 @@ footer {
 
 
 /*Dashbord container options*/
-.dashboard-container{
+.dashboard-container .iframe{
     position: relative;
     display: block;
     padding: 10px;
