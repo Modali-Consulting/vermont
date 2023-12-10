@@ -67,6 +67,9 @@ function initializeDashboard(dashboardContainer) {
             hideTab: true,
             height: '100%',
             width: '100%',
+            filters: {
+                expanded: false, // change it to `false` so that dashboard filters are collapsed (for vertical filter bar)
+              },
         },
     });
 }
