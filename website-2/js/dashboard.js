@@ -77,7 +77,6 @@ function initializeDashboard(dashboardContainer) {
 }
 
 const myDashboard = await embedDashboard();
-
 setInterval(async () => {
     const { width, height } = myDashboard.getScrollSize(); // Function that returns the current scroll size
 

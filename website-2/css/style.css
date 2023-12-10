@@ -182,8 +182,8 @@ footer {
 .dashboard-container {
     position: relative;
     display: block;
+    width: 768px; 
     padding: 10px;
-    width: 100%;
     overflow: hidden; /* Hide scrollbars */
     margin: auto; /* Center the dashboard container within the main body */
     border: none; 
@@ -196,9 +196,8 @@ footer {
     border: none; 
 }
 
-iframe {
-    width: 1200px;
-    height: 1480px;
-    border: none; 
-    
+.embedded-superset iframe {
+    max-width: 100%; /* Ensures iframe is not wider than its parent */
+    display: block; /* Remove extra space below the iframe */
+    /* Remove any fixed width or height if you plan to control it via JS */
 }
