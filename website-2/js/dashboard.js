@@ -76,20 +76,6 @@ function initializeDashboard(dashboardContainer) {
     });
 }
 
-const myDashboard = await embedDashboard();
-setInterval(async () => {
-    const { width, height } = myDashboard.getScrollSize(); // Function that returns the current scroll size
-
-    // Select the iframe within the .embedded-superset container
-    const iframe = document.querySelector('.embedded-superset iframe');
-    
-    if (iframe) {
-        // Apply the width and height to the iframe directly
-        iframe.style.width = `${width}px`;  // Assuming width and height are returned in pixels
-        iframe.style.height = `${height}px`;
-    }
-}, 1000);
-
 document.addEventListener('DOMContentLoaded', function() {
     const dashboardContainers = document.querySelectorAll('.dashboard-container');
     dashboardContainers.forEach(container => initializeDashboard(container));

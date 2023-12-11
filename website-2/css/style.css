@@ -196,11 +196,6 @@ footer {
     border: none; 
 }
 
-.embedded-superset iframe {
-    max-width: 100%; /* Ensures iframe is not wider than its parent */
-    display: block; /* Remove extra space below the iframe */
-    /* Remove any fixed width or height if you plan to control it via JS */
-}
 
 /* Footer section Start*/
 .social-icon a{    

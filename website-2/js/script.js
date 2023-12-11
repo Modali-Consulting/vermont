@@ -10,3 +10,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+// Function to set the size of the iframe according to its body's height
+function resizeIframeToFitContent(iframe) {
+    try {
+        const iframeContent = iframe.contentWindow || iframe.contentDocument.document || iframe.contentDocument;
+        iframe.style.height = iframeContent.document.body.scrollHeight + 'px';
+        iframe.style.width = iframeContent.document.body.scrollWidth + 'px';
+    } catch (e) {
+        console.error('Resize iframe failed:', e);
+    }
+}
+
+// Select the iframe element
+const iframe = document.getElementById('iframe');
+
+// Call the resize function after the iframe loads
+iframe.onload = () => {
+    resizeIframeToFitContent(iframe);
+};
