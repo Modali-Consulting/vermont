@@ -201,3 +201,49 @@ footer {
     display: block; /* Remove extra space below the iframe */
     /* Remove any fixed width or height if you plan to control it via JS */
 }
+
+/* Footer section Start*/
+.social-icon a{    
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+   
+}
+.copy-right p{
+font-size: 16px;
+margin-left: 40px;
+}
+.menu-list {
+    display: inline-block;
+}
+.menu-list ul {
+    display: inline-block;
+    list-style-type: none;
+
+
+}
+.menu-list ul li a {
+    padding: 0px 5px ;
+    display: inline-block;
+    text-decoration: underline;
+    color: black;
+}
+
+.copy-right{
+    color: #FFF;
+
+}
+
+/* Footer section End*/
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 102px;
+  }

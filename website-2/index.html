@@ -103,9 +103,25 @@
 
     </main>
 
-    <footer>
-        <!-- Footer Content Here -->
-    </footer>
+        <footer class="footer">
+            © 2023 Modali Consulting LLC</p>
+      
+        </footer>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset <= sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     <script src="https://unpkg.com/@superset-ui/embedded-sdk"></script>
     <script src="js/script.js"></script>
     <script src="js/dashboard.js"></script>
