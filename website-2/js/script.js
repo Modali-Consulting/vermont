@@ -23,10 +23,9 @@ function resizeIframeToFitContent(iframe) {
     }
 }
 
-// Select the iframe element
-const iframe = document.getElementById('iframe');
+
 
 // Call the resize function after the iframe loads
 iframe.onload = () => {
-    resizeIframeToFitContent(iframe);
+    resizeIframeToFitContent();
 };
