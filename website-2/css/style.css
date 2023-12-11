@@ -4,16 +4,142 @@
 body {
     font-family: "Montserrat","Libre Franklin",sans-serif;
     margin: 0;
+    text-align: center;
+
+}
+
+header {
+    background: #ffffff;
+    color: #000;
+    position: absolute;
+    top: 37px; /* Same as the height of the top-bar */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 100; /* Ensure it's above the main content but below the top-bar */
+    height: auto; /* Allow the header height to grow with content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
 
 }
 
 
+.header-container{
+    display: flex;
+    justify-content: space-between; /* This will space out the logo and navbar */
+    align-items: center;
+    padding: 0 20px; /* Add padding to the left and right of the header */
+
+}
+
+
+.vt-search-close-container, .top-bar {
+    text-align:center;
+    background: #36454F;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Montserrat","Libre Franklin",sans-serif;
+    font-weight: 700;
+    padding: 0.9375em 1.25em;
+    font-size: .6875em;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    
+
+}
+
+
+/* Remove position absolute and explicitly set the logo class to have flex properties */
+.logo {
+    display: block;
+    margin-right: 20px; /* Add some margin if needed */
+
+}
+
+.logo img {
+    height: 100px; /* Set to desired logo height */
+    width: auto; /* Maintain aspect ratio */
+    padding: 10px;
+}
+
+/* Center the navigation menu and remove absolute positioning */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Align items vertically */
+    height: 100%; /* Set to the height of the header */
+    margin-top: 10px; /* Add some space below the logo */
+
+}
+
+/* Ensure the list is centered within the navbar */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display inline-flex to center the items */
+    align-items: center; /* Align items vertically */
+}
+
+/* Remove inline display from list items, as flex display is already set */
+.navbar ul li {
+    padding: 0 15px; /* Space out the list items */
+}
+
+/* Additional style adjustments */
+.navbar ul li a {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat","Libre Franklin",sans-serif;
+
+}
+
+/* Right content flex adjustments */
+.right-content {
+    flex: 0 1 auto; /* Do not grow, do not shrink, and base size on content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar, .right-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .navbar ul {
+      flex-direction: column;
+    }
+  
+    .navbar ul li {
+      padding: 10px 0; /* Space out the list items vertically */
+    }
+  }
+
+
+
 h1 {
+    margin: 1.3888888889rem 0;
+    color: #3c3532;
     font-family: 'gtam',Arial,Helvetica,"Nimbus Sans L",sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+
 }
 
 h2, h3, h4, h5, h6 {
     font-family: 'cschoolbook',Georgia,"Times New Roman","DejaVu Serif",serif;
+    text-align: left;
+    color: #575656;
+    font-style: bold;
+    
+
 }
 
 p {
@@ -23,58 +149,94 @@ p {
     line-height: 1.5555555556rem;
     color: #3c3532;
 }
-.topbar {
-    background: #253a25;
+
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
 }
-.topbar h2 {
+
+.hero-banner {
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    background: url('../images/banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+main {
+    max-width: 768px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer {
+    background: #36454F;
     color: #fff;
-    font-size: 15px;
-    padding: 10px 0px;
-    margin: 0px;
+    text-align: center;
+    padding: 10px 0;
 }
-.header {
-    background: #fff;
-    color: #f1f1f1;
-  }
-.nav-list {
+
+
+
+/* Dashboard container styles */
+.dashboard-container {
+    position: relative;
+    display: block;
+    width: 768px; 
+    padding: 10px;
+    overflow: hidden; /* Hide scrollbars */
+    margin: auto; /* Center the dashboard container within the main body */
+    border: none; 
+}
+
+/* Ensure the <p> inside dashboard-container fills the container */
+.dashboard-container p {
+    margin: 0; /* Remove margin to fit the container properly */
+    height: 100%; /* Expand to the height of the container */
+    border: none; 
+}
+
+.embedded-superset iframe {
+    max-width: 100%; /* Ensures iframe is not wider than its parent */
+    display: block; /* Remove extra space below the iframe */
+    /* Remove any fixed width or height if you plan to control it via JS */
+}
+
+/* Footer section Start*/
+.social-icon a{    
     list-style: none;
     display: flex;
-}
-.nav-list .nav-link a {
-    color: #3c3532;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.4;
-    letter-spacing: 0;
-    word-spacing: 0.0625rem;
-}
-.main-container {
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
     align-items: center;
-    padding: 20px 0px 10px;
+    padding: 0px 10px;
+   
 }
-.logo {
-    display: flex;
+.copy-right p{
+font-size: 16px;
+margin-left: 40px;
+}
+.menu-list {
+    display: inline-block;
+}
+.menu-list ul {
+    display: inline-block;
+    list-style-type: none;
+
+
+}
+.menu-list ul li a {
+    padding: 0px 5px ;
+    display: inline-block;
+    text-decoration: underline;
+    color: black;
 }
 
-.logo img {
-    max-width: 300px;
-    width: 100%;
-    height: 100px;
+.copy-right{
+    color: #FFF;
+
 }
 
-.banner-img img {
-    height: 80vh;
-    width: 100%;
-    object-fit: cover;
-}
+/* Footer section End*/
+
 
 .sticky {
     position: fixed;
@@ -85,55 +247,3 @@ p {
   .sticky + .content {
     padding-top: 102px;
   }
-
-  .para {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-}
-.desc {
-    padding: 50px 0px 0px;
-}
-.topbar h2{
-display: flex;
-align-items: center;
-justify-content: center;    
-
-}
-
-    .topbar a{
-color: #fff;
-text-decoration: none;
-}
-.social-list{
-    list-style: none;
-    display: flex;
-
-}
-/* Footer section Start*/
- .social-icon a{    
-        list-style: none;
-        display: flex;
-        align-items: center;
-        padding: 0px 10px;
-       
-    }
-    .copy-right p{
-    font-size: 16px;
-    margin-left: 40px;
-    }
-    .menu-list {
-        display: flex;
-    }
-    .menu-list ul {
-        display: flex;
-        list-style-type: none;
-
-    }
-    .menu-list ul li a {
-        padding: 0px 5px ;
-        text-decoration: underline;
-        color: black;
-    }
-
-/* Footer section End*/
